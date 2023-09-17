@@ -6,9 +6,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+    - uses: pnpm/action-setup@v2
+      with:
+        version: 8.7.5
     - uses: actions/setup-node@v3
       with:
         node-version: '18'
-        cache: 'npm'
-    - run: npm ci
-    - run: npm ci
+        cache: 'pnpm'
+    - run: pnpm install --frozen-lockfile
+    - run: rm -rf node_modules
+    - run: pnpm install --frozen-lockfile
