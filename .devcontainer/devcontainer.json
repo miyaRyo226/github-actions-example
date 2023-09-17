@@ -6,7 +6,7 @@
 	},
 "remoteUser": "node",
 "mounts": [
-  "source=/Users/ryoya/.ssh,target=/home/node/.ssh,type=bind,consistency=cached"
+  "source=/Users/ryoya/.ssh,target=/home/node/.ssh,type=bind"
 ],
 "features": {
 	"ghcr.io/devcontainers/features/git:1": {},

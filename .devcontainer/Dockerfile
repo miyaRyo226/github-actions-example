@@ -10,3 +10,4 @@ RUN echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
 
 # Set `DEVCONTAINER` environment variable to help with orientation
 ENV DEVCONTAINER=true
+RUN npm -i -g pnpm@8.7.5 && pnpm config set store-dir /home/node/.local/share/pnpm/store
